@@ -9,21 +9,42 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-int main(int argc, const char * argv[]) {
-    int i = 0, szer = 0;
+
+class Labirynt
+{
+private:
+public:
+    int wysokosc = 0, szerokosc = 0, szer, wys = 0 ;
+    fstream plik;
+    fstream wczytajLab();
+    void info();
+    void idz();
     
+};
+
+fstream Labirynt::wczytajLab(){
     fstream plik;
     string labi;
     plik.open("//Users/roboczy/labiryntC++/labirynt/labirynt.txt");
     while( plik.good() ){
-
         plik >> labi;
         szer = string(labi).length();
-        cout << labi << endl;
-         i++;
+        wys++;
     }
-    cout <<endl<< "Labirynt jest szeroki na " << szer << " i wysoki na " << i << endl;
-    cout << endl;
+    return plik;
+};
 
+void Labirynt::info(){
+    cout <<endl<< "Labirynt jest szeroki na " << szer << " i wysoki na " << wys << endl;
+};
+
+
+int main(int argc, const char * argv[]) {
+    string wiersz;
+    Labirynt noowy;
+    noowy.Labirynt::wczytajLab();
+    noowy.plik >> wiersz;
+    noowy.info();
+    cout << wiersz;
     return 0;
 }
