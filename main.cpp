@@ -8,10 +8,22 @@
 
 #include <iostream>
 #include <fstream>
+using namespace std;
 int main(int argc, const char * argv[]) {
-    using namespace std;
+    int i = 0, szer = 0;
+    
     fstream plik;
-    plik.open("labirynt.txt");
-    cout << "Hello, World!\n";
+    string labi;
+    plik.open("//Users/roboczy/labiryntC++/labirynt/labirynt.txt");
+    while( plik.good() ){
+
+        plik >> labi;
+        szer = string(labi).length();
+        cout << labi << endl;
+         i++;
+    }
+    cout <<endl<< "Labirynt jest szeroki na " << szer << " i wysoki na " << i << endl;
+    cout << endl;
+
     return 0;
 }
