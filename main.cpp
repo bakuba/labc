@@ -25,7 +25,7 @@ public:
 fstream Labirynt::wczytajLab(){
     fstream plik;
     string labi;
-    plik.open("//Users/roboczy/labiryntC++/labirynt/labirynt.txt");
+    plik.open("//home/chyba/roboczy/labc/labirynt.txt");
     while( plik.good() ){
         plik >> labi;
         szer = string(labi).length();
