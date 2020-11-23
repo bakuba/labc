@@ -42,6 +42,7 @@ public:
     void sprawdzLab();
 };
 
+<<<<<<< HEAD
 ///##################################################
 void Ludzik::patrz(){
     otoczenie[0][0] = lab[wspol-szerokosc-1];
@@ -103,6 +104,12 @@ void Ludzik::pokazMape(){
 void Labirynt::wczytajLab(){
     string roboczy;
     plik.open("//Users/roboczy/labiryntC++/labirynt/labirynt.txt");
+=======
+fstream Labirynt::wczytajLab(){
+    fstream plik;
+    string labi;
+    plik.open("//home/chyba/roboczy/labc/labirynt.txt");
+>>>>>>> 321cb15e02cb614fe74b78b8b0016f10bab306c1
     while( plik.good() ){
         plik >> roboczy;
         szerokosc = string(roboczy).length();
