@@ -42,7 +42,6 @@ public:
     void sprawdzLab();
 };
 
-<<<<<<< HEAD
 ///##################################################
 void Ludzik::patrz(){
     otoczenie[0][0] = lab[wspol-szerokosc-1];
@@ -54,7 +53,7 @@ void Ludzik::patrz(){
     otoczenie[2][0] = lab[wspol+szerokosc-1];
     otoczenie[2][1] = lab[wspol+szerokosc];
     otoczenie[2][2] = lab[wspol+szerokosc+1];
-}
+};
 void Ludzik::sprawdzLab(){
     int pozycja=NULL, druga=NULL;
     druga = pozycja;
@@ -79,7 +78,7 @@ void Ludzik::sprawdzLab(){
     }while(pozycja != string::npos);
     cout<<"Ludzika odnaleziono.\nJego pozycja to:\n"<<druga<<" w jednowymiarowej tablicy znakow.\nMozna zaczynac!!!\n";
     wspol=druga;
-}
+};
 void Ludzik::wez(string rob, int szer){
     lab = rob;
     szerokosc = szer;
@@ -90,9 +89,6 @@ void Ludzik::pokazMape(){
     cout<<"Ludzik pokazuje posiadany fragment mapy:\n\n";
     for(int i = 0; i<3;i++){
         for(int j=0; j<3; j++){
-            if(otoczenie[i][j] == "_"){
-                cout<<" ";
-            }else
             cout<<"\t"<<otoczenie[i][j];
         }
         cout << endl;
@@ -104,12 +100,6 @@ void Ludzik::pokazMape(){
 void Labirynt::wczytajLab(){
     string roboczy;
     plik.open("//Users/roboczy/labiryntC++/labirynt/labirynt.txt");
-=======
-fstream Labirynt::wczytajLab(){
-    fstream plik;
-    string labi;
-    plik.open("//home/chyba/roboczy/labc/labirynt.txt");
->>>>>>> 321cb15e02cb614fe74b78b8b0016f10bab306c1
     while( plik.good() ){
         plik >> roboczy;
         szerokosc = string(roboczy).length();
@@ -138,7 +128,6 @@ int main(int argc, const char * argv[]) {
     jacek.sprawdzLab();
     cout<<"wspol:\n";
     cout<<jacek.wspol<<endl;
-    jacek.patrz();
-    jacek.pokazMape();
+    
     return 0;
 }
